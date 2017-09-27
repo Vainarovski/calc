@@ -2,7 +2,22 @@ package calc;
 
 public class calculateClass {
 
-    private  String calcMe;
+    private static String calcMe;
+
+    public static calculateClass operation = new calculateClass();
+
+    //    public calculateClass(String calcMe) {
+//        this.calcMe = calcMe;
+//    }
+
+    public static Integer calcMeNow() {
+        int ret = 0;
+
+        if (calcMe == "plus") {
+            ret = 2 + 3;
+        }
+        return ret;
+    }
 
     public void setCalcMe(String calcMe) {
         this.calcMe = calcMe;
@@ -11,22 +26,5 @@ public class calculateClass {
     public String getCalcMe() {
         return calcMe;
     }
-
-    public calculateClass operation = new calculateClass();
-
-    //    public calculateClass(String calcMe) {
-//        this.calcMe = calcMe;
-//    }
-
-
-    public  Integer calcMeNow() {
-        int ret = 0;
-
-        if (operation.calcMe == "plus") {
-            ret = 2 + 3;
-        }
-        return ret;
-    }
-
 
 }
