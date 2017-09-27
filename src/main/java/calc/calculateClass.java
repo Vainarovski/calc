@@ -12,7 +12,9 @@ public class calculateClass {
         return calcMe;
     }
 
-//    public calculateClass(String calcMe) {
+    public calculateClass operation = new calculateClass();
+
+    //    public calculateClass(String calcMe) {
 //        this.calcMe = calcMe;
 //    }
 
@@ -20,7 +22,7 @@ public class calculateClass {
     public  Integer calcMeNow() {
         int ret = 0;
 
-        if (calcMe == "plus") {
+        if (operation.calcMe == "plus") {
             ret = 2 + 3;
         }
         return ret;
