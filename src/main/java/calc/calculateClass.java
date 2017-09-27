@@ -13,7 +13,7 @@ public class calculateClass {
     public static Integer calcMeNow() {
         int ret = 0;
 
-        if (calcMe == "plus") {
+        if (calcMe.equals("plus")) {
             ret = 2 + 3;
         }
         return ret;
