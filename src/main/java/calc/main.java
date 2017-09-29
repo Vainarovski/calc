@@ -25,12 +25,27 @@ public class main {
     public static void main(String[] args) {
         enterABC ();
         ApplicationContext context = new ClassPathXmlApplicationContext ( "calcConfig.xml" );
-        calculateClass plus = (calculateClass) context.getBean ( "calculatePlus" );
-        calculateClass minus = (calculateClass) context.getBean ( "calculateMinus" );
-        calculateClass division = (calculateClass) context.getBean ( "calculateDivision" );
-        calculateClass multiplication = (calculateClass) context.getBean ( "calculateMultiplication" );
-        System.out.println ( division.calcMeNow (numA,numB) );
-
+        calculateClass pls = (calculateClass) context.getBean ( "calculatePlus" );
+        calculateClass min = (calculateClass) context.getBean ( "calculateMinus" );
+        calculateClass div = (calculateClass) context.getBean ( "calculateDivision" );
+        calculateClass mul = (calculateClass) context.getBean ( "calculateMultiplication" );
+        calculateClass sqrt = (calculateClass) context.getBean ( "calculateSqrt" );
+        calculateClass sqr = (calculateClass) context.getBean ( "calculateSqr" );
+//        System.out.println ( div.calc ( numA, numB ) );
+        System.out.println ( quadraticEquationX1 () );
     }
 
+    public static Integer quadraticEquationX1() {
+        int x1 = 0;
+
+        return x1;
+    }
+
+    public static Integer quadraticEquationX2() {
+        return ;
+    }
+
+    public static Integer dis() {
+        return sqr.calcSq ( numB ) + 4 * numA * numC;
+    }
 }

@@ -2,42 +2,56 @@ package calc;
 
 public class calculateClass {
 
-    private static String calcMe;
+    private String calcPMDM;
+    private String calcSq;
 
-    public static calculateClass operation = new calculateClass();
-
-    //    public calculateClass(String calcMe) {
-//        this.calcMe = calcMe;
-//    }
-
-    public static Integer calcMeNow(int a, int b) {
+    public Integer calc(int a, int b) {
         int ret = 0;
 
-        if ( calcMe.equals ( "plus" ) ) {
+        if ( calcPMDM.equals ( "plus" ) ) {
             ret = a + b;
         }
 
-        if ( calcMe.equals ( "minus" ) ) {
+        if ( calcPMDM.equals ( "minus" ) ) {
             ret = a - b;
         }
 
-        if ( calcMe.equals ( "division" ) ) {
+        if ( calcPMDM.equals ( "division" ) ) {
             ret = a / b;
         }
 
-        if ( calcMe.equals ( "multiplication" ) ) {
+        if ( calcPMDM.equals ( "multiplication" ) ) {
             ret = a * b;
+        }
+        return ret;
+    }
+
+    public double calcSq(double a) {
+        double ret = 0;
+        if ( calcPMDM.equals ( "sqrt" ) ) {
+            ret = Math.sqrt ( a );
+        }
+
+        if ( calcPMDM.equals ( "sqr" ) ) {
+            ret = Math.pow ( a, 2 );
         }
 
         return ret;
     }
 
-    public void setCalcMe(String calcMe) {
-        this.calcMe = calcMe;
+    public void setCalc(String calcPMDM) {
+        this.calcPMDM = calcPMDM;
     }
 
-    public String getCalcMe() {
-        return calcMe;
+    public String getCalc() {
+        return calcPMDM;
     }
 
+    public void setCalcSq(String calcSq) {
+        this.calcSq = calcSq;
+    }
+
+    public String getCalcSq() {
+        return calcSq;
+    }
 }

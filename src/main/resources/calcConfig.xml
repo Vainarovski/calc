@@ -4,26 +4,40 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="calculatePlus" class="calc.calculateClass">
-        <property name="calcMe" >
+        <property name="calc" >
             <value>plus</value>
         </property>
     </bean>
 
     <bean id="calculateMinus" class="calc.calculateClass">
-        <property name="calcMe" >
+        <property name="calc" >
             <value>minus</value>
         </property>
     </bean>
 
     <bean id="calculateDivision" class="calc.calculateClass">
-        <property name="calcMe" >
+        <property name="calc" >
             <value>division</value>
         </property>
     </bean>
 
     <bean id="calculateMultiplication" class="calc.calculateClass">
-        <property name="calcMe" >
+        <property name="calc" >
             <value>multiplication</value>
         </property>
     </bean>
+
+    <bean id="calculateSqrt" class="calc.calculateClass">
+        <property name="calcSq" >
+            <value>sqrt</value>
+        </property>
+    </bean>
+
+    <bean id="calculateSqr" class="calc.calculateClass">
+        <property name="calcSq">
+            <value>sqr</value>
+        </property>
+    </bean>
+
+
 </beans>
