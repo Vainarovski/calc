@@ -30,17 +30,19 @@ public class calculateClass {
     public double calcSq(double a) {
         double ret = 0;
         if ( calcSq.equals ( "sqrt" ) ) {
-            if ( a == 0 ) ret = 0;
-            else ret = Math.sqrt ( a );
-        }
+            if ( a == 0 || a < 0 ) ret = 0;
+         else ret = Math.sqrt ( a );
+    }
 
-        if ( calcSq.equals ( "sqr" ) ) {
-            if ( a == 0 ) ret = 0;
-            else ret = Math.pow ( a, 2 );
-        }
+        if(calcSq.equals("sqr"))
+
+    {
+        if ( a == 0 ) ret = 0;
+        else ret = Math.pow ( a, 2 );
+    }
 
         return ret;
-    }
+}
 
     public void setCalc(String calcPMDM) {
         this.calcPMDM = calcPMDM;

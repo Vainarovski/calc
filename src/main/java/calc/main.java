@@ -35,22 +35,22 @@ public class main {
         enterABC ();
         System.out.println ( "Дискриминант квадратного уравнения = " + dis () );
         System.out.println ( "Первый корень квадратного уравнения = " + quadraticEquationX1 () );
-        System.out.println ( "Второй корень квадратного уравнения = " + quadraticEquationX1 () );
+        System.out.println ( "Второй корень квадратного уравнения = " + quadraticEquationX2 () );
     }
 
     public static double quadraticEquationX1() {
         if (numA  == 0 ) return 0;
-        return (-numB + sqrt.calcSq ( dis () )) / (2 * numA);
+        return ((-1)*numB + sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
     public static double quadraticEquationX2() {
         if (numA  == 0 ) return 0;
-        return (-numB - sqrt.calcSq ( dis () )) / (2 * numA);
+        return ((-1)*numB - sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
     public static double dis() {
 
-        return sqr.calcSq ( numB ) + 4 * numA * numC;
+        return (sqr.calcSq ( numB ) - 4 * numA * numC);
     }
 
 
