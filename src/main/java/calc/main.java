@@ -11,8 +11,17 @@ public class main {
     private static int numB = 0;
     private static int numC = 0;
 
+    static ApplicationContext context = new ClassPathXmlApplicationContext ( "calcConfig.xml" );
+    public static calculateClass pls = (calculateClass) context.getBean ( "calculatePlus" );
+    public static calculateClass min = (calculateClass) context.getBean ( "calculateMinus" );
+    public static calculateClass div = (calculateClass) context.getBean ( "calculateDivision" );
+    public static calculateClass mul = (calculateClass) context.getBean ( "calculateMultiplication" );
+    public static calculateClass sqrt = (calculateClass) context.getBean ( "calculateSqrt" );
+    public static calculateClass sqr = (calculateClass) context.getBean ( "calculateSqr" );
+
     public static void enterABC() {
         Scanner enterNumber = new Scanner ( System.in );
+        System.out.println ( "Поиск решений квадратного уравнения" );
         System.out.println ( "Введите число A" );
         numA = enterNumber.nextInt ();
         System.out.println ( "Введите число B" );
@@ -24,28 +33,22 @@ public class main {
 
     public static void main(String[] args) {
         enterABC ();
-        ApplicationContext context = new ClassPathXmlApplicationContext ( "calcConfig.xml" );
-        calculateClass pls = (calculateClass) context.getBean ( "calculatePlus" );
-        calculateClass min = (calculateClass) context.getBean ( "calculateMinus" );
-        calculateClass div = (calculateClass) context.getBean ( "calculateDivision" );
-        calculateClass mul = (calculateClass) context.getBean ( "calculateMultiplication" );
-        calculateClass sqrt = (calculateClass) context.getBean ( "calculateSqrt" );
-        calculateClass sqr = (calculateClass) context.getBean ( "calculateSqr" );
-//        System.out.println ( div.calc ( numA, numB ) );
-        System.out.println ( quadraticEquationX1 () );
+        System.out.println ( "Дискриминант квадратного уравнения = " + dis () );
+        System.out.println ( "Первый корень квадратного уравнения = " + quadraticEquationX1 () );
+        System.out.println ( "Второй корень квадратного уравнения = " + quadraticEquationX1 () );
     }
 
-    public static Integer quadraticEquationX1() {
-        int x1 = 0;
-
-        return x1;
+    public static double quadraticEquationX1() {
+        return (-numB + sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
-    public static Integer quadraticEquationX2() {
-        return ;
+    public static double quadraticEquationX2() {
+        return (-numB - sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
-    public static Integer dis() {
+    public static double dis() {
         return sqr.calcSq ( numB ) + 4 * numA * numC;
     }
+
+
 }

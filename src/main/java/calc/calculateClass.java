@@ -5,8 +5,8 @@ public class calculateClass {
     private String calcPMDM;
     private String calcSq;
 
-    public Integer calc(int a, int b) {
-        int ret = 0;
+    public double calc(double a, double b) {
+        double ret = 0;
 
         if ( calcPMDM.equals ( "plus" ) ) {
             ret = a + b;
