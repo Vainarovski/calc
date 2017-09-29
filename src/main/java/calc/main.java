@@ -6,15 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args) {
-        enterABC ();
-        ApplicationContext context = new ClassPathXmlApplicationContext ( "calcConfig.xml" );
-        calculateClass value = (calculateClass) context.getBean ( "calculate" );
-        System.out.println ( calculateClass.calcMeNow () );
-
-    }
-
-
 
     private static int numA = 0;
     private static int numB = 0;
@@ -30,4 +21,16 @@ public class main {
         numC = enterNumber.nextInt ();
 
     }
+
+    public static void main(String[] args) {
+        enterABC ();
+        ApplicationContext context = new ClassPathXmlApplicationContext ( "calcConfig.xml" );
+        calculateClass plus = (calculateClass) context.getBean ( "calculatePlus" );
+        calculateClass minus = (calculateClass) context.getBean ( "calculateMinus" );
+        calculateClass division = (calculateClass) context.getBean ( "calculateDivision" );
+        calculateClass multiplication = (calculateClass) context.getBean ( "calculateMultiplication" );
+        System.out.println ( division.calcMeNow (numA,numB) );
+
+    }
+
 }

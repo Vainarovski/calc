@@ -3,11 +3,27 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="calculate" class="calc.calculateClass">
+    <bean id="calculatePlus" class="calc.calculateClass">
         <property name="calcMe" >
             <value>plus</value>
         </property>
     </bean>
 
+    <bean id="calculateMinus" class="calc.calculateClass">
+        <property name="calcMe" >
+            <value>minus</value>
+        </property>
+    </bean>
 
+    <bean id="calculateDivision" class="calc.calculateClass">
+        <property name="calcMe" >
+            <value>division</value>
+        </property>
+    </bean>
+
+    <bean id="calculateMultiplication" class="calc.calculateClass">
+        <property name="calcMe" >
+            <value>multiplication</value>
+        </property>
+    </bean>
 </beans>
