@@ -39,14 +39,17 @@ public class main {
     }
 
     public static double quadraticEquationX1() {
+        if (numA  == 0 ) return 0;
         return (-numB + sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
     public static double quadraticEquationX2() {
+        if (numA  == 0 ) return 0;
         return (-numB - sqrt.calcSq ( dis () )) / (2 * numA);
     }
 
     public static double dis() {
+
         return sqr.calcSq ( numB ) + 4 * numA * numC;
     }
 

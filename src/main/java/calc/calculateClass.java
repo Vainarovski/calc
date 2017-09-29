@@ -17,7 +17,8 @@ public class calculateClass {
         }
 
         if ( calcPMDM.equals ( "division" ) ) {
-            ret = a / b;
+            if ( b == 0 ) ret = 0;
+            else ret = a / b;
         }
 
         if ( calcPMDM.equals ( "multiplication" ) ) {
@@ -28,12 +29,14 @@ public class calculateClass {
 
     public double calcSq(double a) {
         double ret = 0;
-        if ( calcPMDM.equals ( "sqrt" ) ) {
-            ret = Math.sqrt ( a );
+        if ( calcSq.equals ( "sqrt" ) ) {
+            if ( a == 0 ) ret = 0;
+            else ret = Math.sqrt ( a );
         }
 
-        if ( calcPMDM.equals ( "sqr" ) ) {
-            ret = Math.pow ( a, 2 );
+        if ( calcSq.equals ( "sqr" ) ) {
+            if ( a == 0 ) ret = 0;
+            else ret = Math.pow ( a, 2 );
         }
 
         return ret;
